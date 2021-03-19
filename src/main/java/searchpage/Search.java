@@ -6,9 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class Search {
+public class Search
+{
     static WebDriver driver;
-    public Search(WebDriver driver) {
+    public Search(WebDriver driver)
+    {
         Search.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -19,7 +21,8 @@ public class Search {
     @FindBy(how = How.CSS, using = "#nav-search-submit-button")
     protected WebElement clicksElement;
 
-    public void productSearch() throws InterruptedException {
+    public void productSearch() throws InterruptedException
+    {
         searchElement.sendKeys("canon eos 1500d");
         clicksElement.click();
     }

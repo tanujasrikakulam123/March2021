@@ -4,9 +4,9 @@ import addtocartpage.AddingToCart;
 import org.testng.annotations.Test;
 import searchpage.Search;
 import utilities.Browser;
-import windowhandilingspage.WindowHandilings;
 
-public class TestMethods extends Browser {
+public class TestMethods extends Browser
+{
     @Test
     public void TestPage() throws InterruptedException
     {
@@ -14,7 +14,5 @@ public class TestMethods extends Browser {
         search.productSearch();
         AddingToCart cart=new AddingToCart(driver);
         cart.addToCart();
-        WindowHandilings window=new WindowHandilings(driver);
-        window.windowHandilings();
     }
 }

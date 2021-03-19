@@ -6,9 +6,11 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class WindowHandilings {
+public class WindowHandilings
+{
     static WebDriver driver;
-    public WindowHandilings(WebDriver driver) {
+    public WindowHandilings(WebDriver driver)
+    {
         WindowHandilings.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -20,6 +22,5 @@ public class WindowHandilings {
         String mainWindow=iter.next();
         String childWindow=iter.next();
         driver.switchTo().window(childWindow);
-        driver.close();
     }
 }
